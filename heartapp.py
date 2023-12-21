@@ -35,7 +35,7 @@ def user_input_features():
     exang = int(st.sidebar.selectbox(
         "Masukan exercise induced angina: ", (0, 1)))
     oldpeak = int(st.sidebar.number_input("Masukan oldpeak: "))
-    slope = int(st.sidebar.number_input(
+    slope = int(st.sidebar.selectbox(
         "Masukan the slope of the peak exercise ST segment: ", (0, 1, 2)))
     ca = int(st.sidebar.selectbox(
         "Masukan number of major vessels: ", (0, 1, 2, 3)))
