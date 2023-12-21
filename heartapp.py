@@ -10,7 +10,7 @@ import pickle
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn import datasets
 
-st.title("WOIIII JANGAN NGEYEL NAPA")
+st.title("Aplikasi Prediksi Penyakit Jantung")
 
 st.write("""
 Aplikasi ini dapat memprediksi apakah seseorang terkena penyakit jantung atau tidak
