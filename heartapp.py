@@ -28,7 +28,7 @@ def user_input_features():
     trestbps = int(st.sidebar.number_input("Masukan resting blood pressure: "))
     chol = int(st.sidebar.number_input("Masukan serum cholestoral in mg/dl: "))
     fbs = int(st.sidebar.selectbox("Masukan fasting blood sugar: ", (0, 1)))
-    restecg = int(st.sidebar.number_input(
+    restecg = int(st.sidebar.selectbox(
         "Masukan resting electrocardiographic results: ", (0, 1, 2)))
     thalach = int(st.sidebar.number_input(
         "Masukan maximum heart rate achieved: "))
