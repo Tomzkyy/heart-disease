@@ -83,9 +83,17 @@ knn = model.fit(X_train, y_train)
 btn = st.button("Prediksi")
 
 if btn:
-    prediksi = knn.predict(df)
-    st.subheader("Hasil Prediksi: ")
-    if prediksi[0] == 0:
-        st.write("Anda tidak terkena penyakit jantung")
+    # Memeriksa apakah semua nilai input adalah 0
+    if df.values.sum() == 0:
+        st.write("Silahkan masukan nilai input terlebih dahulu")
+    # Memberikan peringatan jika nilai input masih ada yg 0
+    elif 0 in df.values:
+        st.write("Masih ada nilai input yang bernilai 0")
     else:
-        st.write("Anda terkena penyakit jantung")
+        # Melakukan prediksi
+        prediksi = knn.predict(df)
+        # Menampilkan hasil prediksi
+        if prediksi == 0:
+            st.write("Anda tidak terkena penyakit jantung")
+        else:
+            st.write("Anda terkena penyakit jantung")
