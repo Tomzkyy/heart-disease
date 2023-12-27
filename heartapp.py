@@ -86,9 +86,6 @@ if btn:
     # Memeriksa apakah semua nilai input adalah 0
     if df.values.sum() == 0:
         st.write("Silahkan masukan nilai input terlebih dahulu")
-    # Memberikan peringatan jika nilai input masih ada yg 0
-    elif 0 in df.values:
-        st.write("Masih ada nilai input yang bernilai 0")
     else:
         # Melakukan prediksi
         prediksi = knn.predict(df)
